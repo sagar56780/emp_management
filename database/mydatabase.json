@@ -1,10 +1,32 @@
 {
   "employee": [
     {
-      "id": "d6b5"
+      "id": "b234",
+      "name": "sagar kumar",
+      "email": "sagat56780@gmail.com",
+      "password": "3434",
+      "discription": "full stack developer"
     },
     {
-      "id": "c361"
+      "id": "036e",
+      "name": "aniket",
+      "email": "aniket@gmail.com",
+      "password": "3434",
+      "discription": "flutter developer"
+    },
+    {
+      "id": "f74d",
+      "name": "anshika",
+      "email": "anshika@gmail.com",
+      "password": "3434",
+      "discription": "nurse"
+    },
+    {
+      "id": "4b0a",
+      "name": "shweta",
+      "email": "shweta@gmail.com",
+      "password": "3434",
+      "discription": "dentist"
     }
   ]
 }
