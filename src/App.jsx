@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home';
 import AddEmployee from './components/AddEmployee';
 import ViewAll from './components/ViewAll';
+import ViewMore from './components/ViewMore';
 
 const App = () => {
     let router=createBrowserRouter([
@@ -22,6 +23,11 @@ const App = () => {
                 {
                     path:'/viewAll',
                     element:<ViewAll/>
+                }
+                ,
+                {
+                    path:'/viewMore/id',
+                    element:<ViewMore/>
                 }
 
             ]
