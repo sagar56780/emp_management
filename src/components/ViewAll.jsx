@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const ViewAll = () => {
   let [data,setdata]=useState([])
@@ -28,22 +29,7 @@ let handleRemove=(e)=>{
 
   
 }
-let fulldetail=(e)=>{
-  e.preventDefault();
-  console.log(e.target.value);
-  let val=e.target.value;
-  return(
-    <tr >
-    <td >{val.id}</td>
-    <td>{val.name}</td>
-    <td>{val.email}</td>
-    <td><button value={val.id} onClick={handleRemove}>RemoveEmployee</button></td>
-   
-    </tr>
-  
-  )
 
-}
 
 
   return (
@@ -72,7 +58,7 @@ let fulldetail=(e)=>{
             <td>{val.name}</td>
             <td>{val.email}</td>
             <td><button value={val.id} onClick={handleRemove}>RemoveEmployee</button></td>
-            <td><button onClick={fulldetail} value={val} >View more</button></td>
+            <td><NavLink to={`/viewMore/${val.id}`}><button>View More</button></NavLink></td>
             </tr>
           
         

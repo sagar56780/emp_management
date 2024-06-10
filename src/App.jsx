@@ -1,8 +1,8 @@
-import React from 'react'
-import Dashboard from './components/Dashboard'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './components/Home';
+import React from 'react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AddEmployee from './components/AddEmployee';
+import Dashboard from './components/Dashboard';
+import Home from './components/Home';
 import ViewAll from './components/ViewAll';
 import ViewMore from './components/ViewMore';
 
@@ -26,7 +26,7 @@ const App = () => {
                 }
                 ,
                 {
-                    path:'/viewMore/id',
+                    path:"/viewMore/:id",
                     element:<ViewMore/>
                 }
 

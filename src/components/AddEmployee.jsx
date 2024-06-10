@@ -29,7 +29,8 @@ const AddEmployee = () => {
     setFormData({
       name: '',
       email: '',
-      password:''
+      password:'',
+      description:''
     })
     // You can process the data further, like sending it to a server
   };
