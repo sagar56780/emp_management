@@ -1,13 +1,6 @@
 {
   "employee": [
     {
-      "id": "b234",
-      "name": "sagar kumar",
-      "email": "sagat56780@gmail.com",
-      "password": "3434",
-      "discription": "full stack developer"
-    },
-    {
       "id": "036e",
       "name": "aniket",
       "email": "aniket@gmail.com",
@@ -26,7 +19,21 @@
       "name": "shweta",
       "email": "shweta@gmail.com",
       "password": "3434",
-      "discription": "dentist"
+      "discription": "dentistist"
+    },
+    {
+      "id": "3206",
+      "name": "sagar kumar",
+      "email": "sagat56780@gmail.com",
+      "password": "3434",
+      "discription": "full stack developer"
+    },
+    {
+      "id": "036e",
+      "name": "aniket",
+      "email": "aniket@gmail.com",
+      "password": "3434",
+      "discription": "java developer"
     }
   ]
 }

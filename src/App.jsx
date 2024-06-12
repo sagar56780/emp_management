@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import Home from './components/Home';
 import ViewAll from './components/ViewAll';
 import ViewMore from './components/ViewMore';
+import UpdateEmployee from './components/UpdateEmployee';
 
 const App = () => {
     let router=createBrowserRouter([
@@ -28,6 +29,11 @@ const App = () => {
                 {
                     path:"/viewMore/:id",
                     element:<ViewMore/>
+                },
+                {
+                    path:"/updateEmployee/:id",
+                    element:<UpdateEmployee/>
+                   
                 }
 
             ]

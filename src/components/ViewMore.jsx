@@ -7,7 +7,7 @@ const ViewMore = () => {
         id:"",
         name:"",
         email:"",
-        description:""
+        discription:""
     })
 
     let {id}=useParams();
@@ -21,9 +21,42 @@ const ViewMore = () => {
           // ...
         }
         fetchData();
-      }, []); 
+      },[]); 
     return(
-        <> {id}
+        <> 
+          
+     <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Name</td>
+          <td>Email</td>
+          
+
+        </tr>
+
+
+      </thead>
+      <tbody>
+      
+      {
+       
+            
+            <tr >
+            <td >{data.id}</td>
+            <td>{data.name}</td>
+            <td>{data.email}</td>
+            <td>{data.discription}</td>
+            </tr>
+          
+      }
+     
+        
+     
+      </tbody>
+     
+
+     </table>
         </>
     )
   

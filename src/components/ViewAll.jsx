@@ -41,6 +41,8 @@ let handleRemove=(e)=>{
           <td>Name</td>
           <td>Email</td>
           <td>Remove Employee</td>
+          <td>Full details </td>
+          <td>Update details</td>
           
 
         </tr>
@@ -59,7 +61,8 @@ let handleRemove=(e)=>{
             <td>{val.email}</td>
             <td><button value={val.id} onClick={handleRemove}>RemoveEmployee</button></td>
             <td><NavLink to={`/viewMore/${val.id}`}><button>View More</button></NavLink></td>
-            </tr>
+            <td><NavLink to={`/updateEmployee/${val.id}`}><button>Update</button></NavLink></td>
+            </tr> 
           
         
           )

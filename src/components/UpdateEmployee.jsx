@@ -1,18 +1,32 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-const AddEmployee = () => {
-  const [formData, setFormData] = useState({
+const UpdateEmployee = () => {
+    let {id}=useParams();
+   
+  const [formData, updateData] = useState({
+ 
     name: '',
     email: '',
     password:'',
     discription:''
   });
+  useEffect(() => {
+    async function fetchData() {
+      // You can await here
+      const {data} = await axios.get(`http://localhost:4000/employee/${id}`);
+      console.log(data);
+      updateData(data);
+      // ...
+    }
+    fetchData();
+  }, []); 
 
   // Step 4: Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    updateData((prevData) => ({
       ...prevData,
       [name]: value
     }));
@@ -22,10 +36,10 @@ const AddEmployee = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data Submitted:', formData);
-    axios.post("http://localhost:4000/employee",formData);
-    window.alert('data submitted sucussfully')
+    axios.put(`http://localhost:4000/employee/${id}`,formData);
+    window.alert('data updated sucussfully')
     window.location.reload();
-    setFormData({
+    updateData({
       name: '',
       email: '',
       password:'',
@@ -39,7 +53,7 @@ const AddEmployee = () => {
   return (
     <main>
  <div className="form-container" onSubmit={handleSubmit}>
-    <h2>Employee Registration</h2>
+    <h2>Employee Update</h2>
     <form id="employeeForm" >
       <label htmlFor="name">Name:</label>
       <input type="text" id="name" name="name" value={formData.name} required onChange={handleChange}/>
@@ -60,4 +74,4 @@ const AddEmployee = () => {
   )
 }
 
-export default AddEmployee
+export default UpdateEmployee
